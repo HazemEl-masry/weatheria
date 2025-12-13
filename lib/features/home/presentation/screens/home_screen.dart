@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:weather_app/features/home/presentation/widgets/home_no_data_body_widget.dart';
+import 'package:weather_app/features/home/presentation/widgets/home_data_body_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -8,7 +8,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: HomeNoDataBodyWidget(),
+      body: HomeDataBodyWidget(),
     );
   }
 }
