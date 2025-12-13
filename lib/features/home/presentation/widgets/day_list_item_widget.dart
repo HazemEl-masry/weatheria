@@ -21,7 +21,6 @@ class DayListItemWidget extends StatelessWidget {
         image: const DecorationImage(
           image: CachedNetworkImageProvider(
             "https://cdn.creazilla.com/icons/7911203/weather-icon-md.png",
-            maxHeight: 100
           ),
         ),
       ),
