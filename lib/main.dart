@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           title: 'Weatheria',
           theme: ThemeData(
-            brightness: Brightness.light,
+            brightness: Brightness.dark,
             // colorScheme: ColorScheme.fromSeed(
             //   seedColor: Colors.deepPurple,
             //   brightness: Brightness.dark

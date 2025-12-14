@@ -15,7 +15,11 @@ class DataBodyWidget extends StatelessWidget {
           child: Text(
             "Sunny",
             textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 30.0.sp, fontWeight: FontWeight.bold),
+            style: TextStyle(
+              fontSize: 30.0.sp,
+              fontWeight: FontWeight.bold,
+              color: Theme.of(context).colorScheme.onSurface,
+            ),
           ),
         ),
         Row(
@@ -34,6 +38,7 @@ class DataBodyWidget extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 30.0.sp,
                     fontWeight: FontWeight.bold,
+                    color: Theme.of(context).colorScheme.onSurface,
                   ),
                 ),
               ],
