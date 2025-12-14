@@ -30,16 +30,33 @@ class DataBodyWidget extends StatelessWidget {
               width: 180.w,
             ),
             SizedBox(width: 20.0.w),
-            Row(
+            Column(
               children: [
-                Icon(Icons.thermostat_sharp, size: 30.0.sp),
+                Row(
+              children: [
+                Icon(Icons.location_on, size: 30.0.sp),
                 Text(
-                  "50.0\u2103",
+                  "Cairo",
                   style: TextStyle(
                     fontSize: 30.0.sp,
                     fontWeight: FontWeight.bold,
                     color: Theme.of(context).colorScheme.onSurface,
                   ),
+                ),
+              ],
+            ),
+                Row(
+                  children: [
+                    Icon(Icons.thermostat_sharp, size: 30.0.sp),
+                    Text(
+                      "50.0\u2103",
+                      style: TextStyle(
+                        fontSize: 30.0.sp,
+                        fontWeight: FontWeight.bold,
+                        color: Theme.of(context).colorScheme.onSurface,
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
