@@ -20,7 +20,11 @@ class HomeNoDataBodyWidget extends StatelessWidget {
           Text(
             "No Weather yet start search to get weather .",
             textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 20.0.sp, fontWeight: FontWeight.bold),
+            style: TextStyle(
+              fontSize: 20.0.sp,
+              fontWeight: FontWeight.bold,
+              color: Theme.of(context).colorScheme.onSurface,
+            ),
           ),
         ],
       ),
