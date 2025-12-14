@@ -1,11 +1,17 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:intl/intl.dart';
 import 'package:weather_app/features/home/data/models/day_model.dart';
 
 class DayListItemWidget extends StatelessWidget {
   const DayListItemWidget({super.key, required this.dayModel});
   final DayModel dayModel;
+
+  String _formatDate(String date) {
+    final DateTime dateTime = DateTime.parse(date);
+    return DateFormat('dd.MMM').format(dateTime).toUpperCase();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +40,7 @@ class DayListItemWidget extends StatelessWidget {
           const Spacer(),
           Center(
             child: Text(
-              dayModel.date,
+              _formatDate(dayModel.date),
               style: TextStyle(
                 fontSize: 18.0.sp,
                 // color: Colors.white,
