@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:weather_app/features/home/presentation/widgets/custom_bottom_nav.dart';
 import 'package:weather_app/features/home/presentation/widgets/home_data_body_widget.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -26,7 +27,17 @@ class HomeScreen extends StatelessWidget {
           ),
         ],
       ),
-      body: const HomeDataBodyWidget(),
+      body: Stack(
+        children: [
+          const HomeDataBodyWidget(),
+          Positioned(
+            right: 20.0.w,
+            left: 20.0.w,
+            bottom: 20.0.h,
+            child: const CustomBottomNav(),
+          )
+        ],
+      ),
     );
   }
 }
