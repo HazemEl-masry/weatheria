@@ -1,6 +1,7 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:weather_app/features/home/presentation/widgets/day_list_item_widget.dart';
+import 'package:weather_app/features/home/presentation/widgets/data_body_widget.dart';
 import 'package:weather_app/features/home/presentation/widgets/day_list_widget.dart';
 
 class HomeDataBodyWidget extends StatelessWidget {
@@ -10,13 +11,15 @@ class HomeDataBodyWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(
-        top: 50.h,
+        top: 3.h,
         right: 20.0.w,
         left: 20.0.w
       ),
-      child: const Column(
+      child: Column(
         children: [
-          DayListWidget(),
+          const DayListWidget(),
+          SizedBox(height: 20.0.h),
+          const DataBodyWidget(),
         ],
       ),
     );

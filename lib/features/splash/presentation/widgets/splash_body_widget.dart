@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
@@ -12,7 +13,13 @@ class SplashBodyWidget extends StatelessWidget {
       padding: EdgeInsets.only(top: 150.0.h, right: 20.0.w, left: 20.0.w),
       child: Column(
         children: [
-          Text("Weatheria", style: GoogleFonts.pacifico(fontSize: 50.0.sp)),
+          Text(
+            "Weatheria",
+            style: GoogleFonts.pacifico(
+              fontSize: 50.0.sp,
+              color: const Color(0xFF543CDE)
+            ),
+          ),
           SizedBox(height: 30.0.h),
           Lottie.asset("assets/animation/animation.json"),
         ],

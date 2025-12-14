@@ -22,7 +22,11 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           title: 'Weatheria',
           theme: ThemeData(
-            colorScheme: .fromSeed(seedColor: Colors.deepPurple),
+            brightness: Brightness.light,
+            // colorScheme: ColorScheme.fromSeed(
+            //   seedColor: Colors.deepPurple,
+            //   brightness: Brightness.dark
+            // ),
             textTheme: GoogleFonts.ubuntuTextTheme(Theme.of(context).textTheme),
           ),
           routerConfig: appRouter,

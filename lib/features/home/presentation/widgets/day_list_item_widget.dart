@@ -31,6 +31,7 @@ class DayListItemWidget extends StatelessWidget {
             "25\u2103",
             style: TextStyle(
               fontSize: 20.0.sp,
+              fontWeight: FontWeight.bold
               // color: Colors.white
             ),
           ),
@@ -39,7 +40,7 @@ class DayListItemWidget extends StatelessWidget {
             child: Text(
               "17 DCE",
               style: TextStyle(
-                fontSize: 20.0.sp,
+                fontSize: 18.0.sp,
                 // color: Colors.white,
                 fontWeight: FontWeight.bold
               ),
