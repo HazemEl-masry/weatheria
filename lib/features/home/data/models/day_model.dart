@@ -7,9 +7,9 @@ class DayModel {
 
   factory DayModel.fromJson(Map<String, dynamic> json) {
     return DayModel(
-      avgTemp: json['day']['avgtemp_c'].toDouble(),
-      icon: 'https:${json['day']['condition']['icon']}',
-      date: json['date'],
+      avgTemp: (json['day']['avgtemp_c'] as num?)?.toDouble() ?? 0.0,
+      icon: 'https:${json['day']['condition']['icon'] ?? ""}',
+      date: json['date'] ?? "Unknown",
     );
   }
 }

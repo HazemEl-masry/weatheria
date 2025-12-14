@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:weather_app/features/home/data/models/weather_details_model.dart';
 
 class WeatherDetailsWidget extends StatelessWidget {
-  const WeatherDetailsWidget({super.key});
+  const WeatherDetailsWidget({super.key, required this.weatherDetails});
+  final WeatherDetailsModel weatherDetails;
 
   @override
   Widget build(BuildContext context) {
@@ -13,6 +15,14 @@ class WeatherDetailsWidget extends StatelessWidget {
       Icons.water_drop,
       Icons.air,
       Icons.cloudy_snowing,
+    ];
+    List<int> values = [
+      weatherDetails.maxtemp,
+      weatherDetails.mintemp,
+      weatherDetails.maxwind,
+      weatherDetails.totalprecip,
+      weatherDetails.avgvis,
+      weatherDetails.avghumidity,
     ];
     return GridView.builder(
       shrinkWrap: true,
@@ -42,7 +52,7 @@ class WeatherDetailsWidget extends StatelessWidget {
               Icon(icons[index], size: 30.r),
               const Spacer(),
               Text(
-                "20.0\u2103",
+                "${values[index]}\u2103",
                 style: TextStyle(
                   fontSize: 20.0.sp,
                   fontWeight: FontWeight.bold,

@@ -1,10 +1,12 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:weather_app/features/home/data/models/weather_details_model.dart';
 import 'package:weather_app/features/home/presentation/widgets/weather_details_widget.dart';
 
 class DataBodyWidget extends StatelessWidget {
-  const DataBodyWidget({super.key});
+  const DataBodyWidget({super.key, required this.weatherDetails});
+  final WeatherDetailsModel weatherDetails;
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +15,7 @@ class DataBodyWidget extends StatelessWidget {
       children: [
         Center(
           child: Text(
-            "Sunny",
+            weatherDetails.condition,
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 30.0.sp,
@@ -24,11 +26,7 @@ class DataBodyWidget extends StatelessWidget {
         ),
         Row(
           children: [
-            CachedNetworkImage(
-              imageUrl:
-                  "https://cdn.creazilla.com/icons/7911203/weather-icon-md.png",
-              width: 180.w,
-            ),
+            CachedNetworkImage(imageUrl: weatherDetails.icon, width: 180.w),
             SizedBox(width: 20.0.w),
             Column(
               children: [
@@ -36,7 +34,7 @@ class DataBodyWidget extends StatelessWidget {
                   children: [
                     Icon(Icons.location_on, size: 30.0.sp),
                     Text(
-                      "Cairo",
+                      weatherDetails.name,
                       style: TextStyle(
                         fontSize: 30.0.sp,
                         fontWeight: FontWeight.bold,
@@ -49,7 +47,7 @@ class DataBodyWidget extends StatelessWidget {
                   children: [
                     Icon(Icons.thermostat_sharp, size: 30.0.sp),
                     Text(
-                      "50.0\u2103",
+                      "${weatherDetails.temp}\u2103",
                       style: TextStyle(
                         fontSize: 30.0.sp,
                         fontWeight: FontWeight.bold,
@@ -62,7 +60,7 @@ class DataBodyWidget extends StatelessWidget {
             ),
           ],
         ),
-        const WeatherDetailsWidget(),
+        WeatherDetailsWidget(weatherDetails: weatherDetails),
       ],
     );
   }
