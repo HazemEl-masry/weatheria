@@ -12,9 +12,7 @@ class CustomBottomNav extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 20.w),
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.all(
-          Radius.circular(25.r),
-        ),
+        borderRadius: BorderRadius.all(Radius.circular(25.r)),
         boxShadow: [
           BoxShadow(
             color: Colors.black12,
@@ -26,36 +24,26 @@ class CustomBottomNav extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          _NavIcon(
-            icon: const Icon(Icons.home),
-            onPressed: () {},
-          ),
+          _NavIcon(icon: const Icon(Icons.home), onPressed: () {}),
           _NavIcon(
             icon: const Icon(Icons.search),
             onPressed: () {
               context.push("/SearchScreen");
             },
           ),
-          _NavIcon(
-            icon: const Icon(Icons.category),
-            onPressed: () {},
-          ),
-          _NavIcon(
-            icon: const Icon(Icons.settings),
-            onPressed: () {},
-          ),
+          _NavIcon(icon: const Icon(Icons.category), onPressed: () {}),
+          _NavIcon(icon: const Icon(Icons.settings), onPressed: () {}),
         ],
       ),
     );
   }
 }
 
-
 class _NavIcon extends StatelessWidget {
   final Widget icon;
   final void Function()? onPressed;
 
-  const _NavIcon({required this.icon,required this.onPressed});
+  const _NavIcon({required this.icon, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {

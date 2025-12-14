@@ -17,7 +17,7 @@ class SplashBodyWidget extends StatelessWidget {
             "Weatheria",
             style: GoogleFonts.pacifico(
               fontSize: 50.0.sp,
-              color: const Color(0xFF543CDE)
+              color: const Color(0xFF543CDE),
             ),
           ),
           SizedBox(height: 30.0.h),

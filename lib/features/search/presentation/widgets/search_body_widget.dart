@@ -8,18 +8,14 @@ class SearchBodyWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(
-        top: 150.0.h,
-        left: 20.0.w,
-        right: 20.0.w
-      ),
+      padding: EdgeInsets.only(top: 150.0.h, left: 20.0.w, right: 20.0.w),
       child: Column(
         children: [
           TextFormField(
             onSaved: (cityName) {},
             decoration: InputDecoration(
               border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(15.0.r)
+                borderRadius: BorderRadius.circular(15.0.r),
               ),
               hintText: "Enter city name",
               prefixIcon: const Icon(Icons.search),
@@ -30,7 +26,7 @@ class SearchBodyWidget extends StatelessWidget {
             ),
           ),
           // SizedBox(height: 50.0.h),
-          Lottie.asset("assets/animation/search_animation.json")
+          Lottie.asset("assets/animation/search_animation.json"),
         ],
       ),
     );

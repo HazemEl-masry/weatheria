@@ -33,18 +33,18 @@ class DataBodyWidget extends StatelessWidget {
             Column(
               children: [
                 Row(
-              children: [
-                Icon(Icons.location_on, size: 30.0.sp),
-                Text(
-                  "Cairo",
-                  style: TextStyle(
-                    fontSize: 30.0.sp,
-                    fontWeight: FontWeight.bold,
-                    color: Theme.of(context).colorScheme.onSurface,
-                  ),
+                  children: [
+                    Icon(Icons.location_on, size: 30.0.sp),
+                    Text(
+                      "Cairo",
+                      style: TextStyle(
+                        fontSize: 30.0.sp,
+                        fontWeight: FontWeight.bold,
+                        color: Theme.of(context).colorScheme.onSurface,
+                      ),
+                    ),
+                  ],
                 ),
-              ],
-            ),
                 Row(
                   children: [
                     Icon(Icons.thermostat_sharp, size: 30.0.sp),

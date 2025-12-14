@@ -6,6 +6,14 @@ class WeatherDetailsWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<IconData> icons = [
+      Icons.thermostat,
+      Icons.thermostat,
+      Icons.cloud,
+      Icons.water_drop,
+      Icons.air,
+      Icons.cloudy_snowing,
+    ];
     return GridView.builder(
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
@@ -31,7 +39,7 @@ class WeatherDetailsWidget extends StatelessWidget {
           ),
           child: Column(
             children: [
-              Icon(Icons.cloudy_snowing, size: 50.r),
+              Icon(icons[index], size: 30.r),
               const Spacer(),
               Text(
                 "20.0\u2103",

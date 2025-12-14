@@ -11,7 +11,7 @@ class HomeNoDataBodyWidget extends StatelessWidget {
       padding: EdgeInsets.only(
         top: MediaQuery.of(context).size.height / 3,
         right: 20.0.w,
-        left: 20.0.w
+        left: 20.0.w,
       ),
       child: Column(
         children: [
@@ -20,11 +20,8 @@ class HomeNoDataBodyWidget extends StatelessWidget {
           Text(
             "No Weather yet start search to get weather .",
             textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: 20.0.sp,
-              fontWeight: FontWeight.bold,
-            ),
-          )
+            style: TextStyle(fontSize: 20.0.sp, fontWeight: FontWeight.bold),
+          ),
         ],
       ),
     );

@@ -6,10 +6,7 @@ import 'package:weather_app/features/splash/presentation/screens/splash_screen.d
 // GoRouter configuration
 final appRouter = GoRouter(
   routes: [
-    GoRoute(
-      path: '/',
-      builder: (context, state) => const SplashScreen(),
-    ),
+    GoRoute(path: '/', builder: (context, state) => const SplashScreen()),
     GoRoute(
       path: "/HomeScreen",
       builder: (context, state) => const HomeScreen(),
