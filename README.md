@@ -1,7 +1,7 @@
 # weather_app
 
 A new Flutter project.
-
+[ezgif-329e6e2d48d5da40.webm](https://github.com/user-attachments/assets/eef6c8c9-ec35-45a1-8b2c-ea56f2965754)
 <img width="200" height="410" alt="Screenshot_1765751326" src="https://github.com/user-attachments/assets/17d02412-683d-44cb-8a81-8d7c55e22b2d" />
 <img width="200" height="410" alt="Screenshot_1765751403" src="https://github.com/user-attachments/assets/15766021-c8fb-42e9-b6a8-187011f3bb2f" />
 <img width="200" height="410" alt="Screenshot_1765751535" src="https://github.com/user-attachments/assets/a985f1ec-8fc0-487a-bbdc-ff6e758e2b6a" />
