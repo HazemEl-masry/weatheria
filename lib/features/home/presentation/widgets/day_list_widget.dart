@@ -4,19 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:weather_app/features/home/presentation/cubits/day_weather_cubit/day_weather_cubit.dart';
 import 'package:weather_app/features/home/presentation/widgets/day_list_item_widget.dart';
 
-class DayListWidget extends StatefulWidget {
+class DayListWidget extends StatelessWidget {
   const DayListWidget({super.key});
-
-  @override
-  State<DayListWidget> createState() => _DayListWidgetState();
-}
-
-class _DayListWidgetState extends State<DayListWidget> {
-  @override
-  void initState() {
-    super.initState();
-    BlocProvider.of<DayWeatherCubit>(context).getDayWeather();
-  }
 
   @override
   Widget build(BuildContext context) {

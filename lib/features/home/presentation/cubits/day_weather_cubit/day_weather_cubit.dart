@@ -8,10 +8,10 @@ part 'day_weather_state.dart';
 class DayWeatherCubit extends Cubit<DayWeatherState> {
   DayWeatherCubit() : super(DayWeatherInitial());
 
-  Future<void> getDayWeather() async {
+  Future<void> getDayWeather({required String cityName}) async {
     emit(DayWeatherLoading());
     try {
-      final dayModel = await DayRepoImpl().getDayWeather(cityName: 'Cairo');
+      final dayModel = await DayRepoImpl().getDayWeather(cityName: cityName);
       emit(DayWeatherSuccess(dayModel: dayModel));
     } catch (e) {
       emit(DayWeatherError(message: e.toString()));

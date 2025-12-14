@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
+import 'package:weather_app/features/home/presentation/cubits/day_weather_cubit/day_weather_cubit.dart';
+import 'package:weather_app/features/home/presentation/cubits/weather_details_cubit/weather_details_cubit.dart';
 
 class CustomBottomNav extends StatelessWidget {
   const CustomBottomNav({super.key});
@@ -27,8 +30,17 @@ class CustomBottomNav extends StatelessWidget {
           _NavIcon(icon: const Icon(Icons.home), onPressed: () {}),
           _NavIcon(
             icon: const Icon(Icons.search),
-            onPressed: () {
-              context.push("/SearchScreen");
+            onPressed: () async {
+              final cityName = await context.push<String>("/SearchScreen");
+              if (cityName != null && context.mounted) {
+                // Trigger both cubits to update weather data
+                context.read<WeatherDetailsCubit>().getWeatherDetails(
+                  cityName: cityName,
+                );
+                context.read<DayWeatherCubit>().getDayWeather(
+                  cityName: cityName,
+                );
+              }
             },
           ),
           _NavIcon(icon: const Icon(Icons.category), onPressed: () {}),

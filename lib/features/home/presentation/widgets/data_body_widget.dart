@@ -27,7 +27,7 @@ class DataBodyWidget extends StatelessWidget {
         Row(
           children: [
             CachedNetworkImage(imageUrl: weatherDetails.icon, width: 180.w),
-            SizedBox(width: 20.0.w),
+            // SizedBox(width: 20.0.w),
             Column(
               children: [
                 Row(
